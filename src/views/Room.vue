@@ -62,8 +62,8 @@ export default {
       joinTimeout: config.defaultJoinTimeout,
     }
 
-    if (config.env.turnUrl) {
-      sessionConfig.turn = config.env.turnUrl
+    if (config.env.turnUrls) {
+      sessionConfig.turnUrls = config.env.turnUrls
     }
 
     this.rtc = this.setupRtc(new Session(sessionConfig))
